@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Star Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ========== HEADER AND NAV ========== -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar-container">
+          <!--Logo-->
+          <div class="logo">
+            <i class="fas fa-paw"></i>
+            <span>Pet Star</span>
+          </div>
+          <!-- Hamburger nav -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!--Navbar-->
+          <ul class="nav-menu">
+            <li><a href="#hero" class="nav-link">Početna</a></li>
+            <li><a href="#products" class="nav-link">Proizvodi</a></li>
+            <li><a href="#services" class="nav-link">Usluge</a></li>
+            <li><a href="#about" class="nav-link">O nama</a></li>
+            <li><a href="#contact" class="nav-link">Kontakt</a></li>
+          </ul>
+
+          <!--Shop cart-->
+          <div class="cart-icon" id="cartIcon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Najbolja Pet Shop ponuda</h1>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCT SECTION ========== -->
+    <section class="products" id="products">
+      <div class="container">
+        <h2 class="section-title">Naši proizvodi</h2>
+        <!-- <p class="section-subtitle">Pronađite sve za Vaše ljubimce</p> -->
+
+        <!--Buttons category-->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">
+            Svi proizvodi
+          </button>
+          <button class="filter-btn" data-filter="hrana">Hrana</button>
+          <button class="filter-btn" data-filter="igracke">Igračke</button>
+          <button class="filter-btn" data-filter="pribor">Pribor</button>
+        </div>
+
+        <!-- Products grid-->
+        <div class="products-grid" id="productsGrid">
+          <!--Products will be loaded with JS-->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Naše Usluge</h2>
+        <!-- <p class="section-subtitle">Kvalitetne usluge za vaše ljubimce</p> -->
+
+        <div class="services-grid">
+          <!-- Grooming -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cut"></i>
+            </div>
+            <h3>Grooming</h3>
+            <p>Profesionalno pranje, šišanje i njega dlake vašeg ljubimca</p>
+            <span class="price">od 30KM</span>
+          </div>
+
+          <!-- Vet -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>Veterinarska Pomoć</h3>
+            <p>Medicinski pregledi, vakcinacije i hitna veterinarska pomoć</p>
+            <span class="price">od 50KM</span>
+          </div>
+
+          <!-- Playground -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3>Igraonica</h3>
+            <p>
+              Bezbjedna igraonica gdje se vaši ljubimci mogu slobodno igrati
+            </p>
+            <span class="price">od 15KM/sat</span>
+          </div>
+
+          <!-- Pets hotel-->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-hotel"></i>
+            </div>
+            <h3>Hotel za Pets</h3>
+            <p>Udoban smještaj sa prehranom i njegom tijekom vašeg odsustva</p>
+            <span class="price">od 25KM/noć</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 class="section-title">O nama</h2>
+            <p>
+              PetStar je vodeći pet shop u gradu sa više od 15 godina iskustva u
+              brizi za životinje. Naš tim je sastavljen od stručnjaka koji vole
+              životinje i posvećeni su pružanju najboljih usluga.
+            </p>
+            <p>Sve usluge su prilagođene potrebama vašeg ljubimca.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <h3>8000+</h3>
+                <p>Zadovoljnih kupaca</p>
+              </div>
+              <div class="stat">
+                <h3>2000+</h3>
+                <p>Proizvoda</p>
+              </div>
+              <div class="stat">
+                <h3>15+</h3>
+                <p>Godina iskustva</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ilustracija -->
+              <rect width="200" height="200" fill="#F0E6FF" rx="15" />
+              <circle cx="80" cy="70" r="20" fill="#FFB6C1" />
+              <circle cx="120" cy="70" r="20" fill="#87CEEB" />
+              <circle cx="100" cy="110" r="20" fill="#98FB98" />
+              <rect
+                x="70"
+                y="100"
+                width="60"
+                height="40"
+                fill="#FFE5CC"
+                rx="5"
+              />
+              <circle cx="85" cy="115" r="3" fill="#333" />
+              <circle cx="115" cy="115" r="3" fill="#333" />
+              <path
+                d="M 95 125 Q 100 130 105 125"
+                fill="none"
+                stroke="#333"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Kontaktiraj nas</h2>
+        <p class="section-subtitle">Ukoliko imate pitanja? Javite nam se!</p>
+
+        <div class="contact-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Vaše ime" required />
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Vaš email" required />
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="phone"
+                placeholder="Telefonski broj (opcionalno)"
+              />
+            </div>
+
+            <div class="form-group">
+              <textarea
+                id="message"
+                placeholder="Vaša poruka"
+                rows="5"
+                required
+              ></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+              Pošalji poruku
+            </button>
+          </form>
+
+          <div class="contact-info">
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Adresa</h3>
+              <p>Tuzla</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <h3>Telefon</h3>
+              <p>+387 62 555 333</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>info@petstar.ba</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-clock"></i>
+              <h3>Radno vrijeme</h3>
+              <p>
+                Ponedjeljak - Petak: 08:00 - 18:00<br />Subota: 10:00 - 16:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>O nama</h3>
+            <p>
+              PetStar je vodeći pet shop sa najboljim proizvodima i uslugama za
+              vaše ljubimce.
+            </p>
+            <div class="social-links">
+              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <!--         <div class="footer-section">
+            <h3>Brzi linkovi</h3>
+            <ul>
+              <li><a href="#hero">Početna</a></li>
+              <li><a href="#products">Proizvodi</a></li>
+              <li><a href="#services">Usluge</a></li>
+              <li><a href="#about">O nama</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Kategorije</h3>
+            <ul>
+              <li><a href="#">Hrana</a></li>
+              <li><a href="#">Igračke</a></li>
+              <li><a href="#">Pribor</a></li>
+              <li><a href="#">Usluge</a></li>
+            </ul>
+          </div> -->
+          <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Prijavite se na našu listu za specijalne ponude</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Tvoj email" required />
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; Pet Star Shop 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========== CART MODAL ========== -->
+    <div class="modal" id="cartModal">
+      <div class="modal-content cart-modal-content">
+        <button class="modal-close">&times;</button>
+        <h2 class="cart-modal-title">Vaša Korpa</h2>
+
+        <div class="cart-empty" id="cartEmpty">
+          <i class="fas fa-shopping-cart"></i>
+          <p>Vaša korpa je prazna</p>
+        </div>
+
+        <div
+          class="cart-items-container"
+          id="cartItemsContainer"
+          style="display: none"
+        >
+          <div class="cart-items" id="cartItems"></div>
+
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Ukupno stavki:</span>
+              <span id="cartTotalItems">0</span>
+            </div>
+            <!-- <div class="summary-row">
+              <span>Maloprodajna cena:</span>
+              <span id="cartSubtotal">0.00€</span>
+            </div> -->
+            <div
+              class="summary-row discount"
+              id="discountRow"
+              style="display: none"
+            >
+              <span>Popust (10%):</span>
+              <span id="cartDiscount">-0.00KM</span>
+            </div>
+            <div class="summary-row total">
+              <span>Ukupno:</span>
+              <span id="cartTotal">0.00KM</span>
+            </div>
+          </div>
+
+          <div class="cart-actions">
+            <button class="btn btn-secondary" id="continueShopping">
+              Nastavi kupovinu
+            </button>
+            <button class="btn btn-primary btn-large" id="checkout">
+              Potvrdi kupovinu
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== NOTIFTCATION ========== -->
+    <div class="notification" id="notification">
+      <span id="notificationText"></span>
+    </div>
+
+    <!--Script JS-->
+    <script src="script.js"></script>
+  </body>
+</html>
